@@ -15,5 +15,10 @@ namespace ApiCatalogo.Context
         public DbSet<Produto>? Produtos { get; set; }
         public DbSet<Categoria>? categorias { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder mb)
+        {
+            
+        }
+
     }
 }

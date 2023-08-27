@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+aoBdeGd4CHGn32zVeGtuqDz2c6B7v4srKxpGnbEcWYvs3R4b6NIAFFmgii/Tin3oaWiX278fMMKJFbuRj/zjg==",
+  "dgSpecHash": "QTFmOdfnqVI9sUOYmjyRoqWEQMm3+vEF3fPIVaYRRjFuWmkM5tXSC2M8QhuV3I2vBjO177JqvMH7Dbtcwk97EQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\catar\\OneDrive\\Área de Trabalho\\Anderson\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+  "projectFilePath": "C:\\Users\\catar\\OneDrive\\Área de Trabalho\\Anderson\\ApiCatalogoMinimalAPI\\ApiCatalogo\\ApiCatalogo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\catar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\catar\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
