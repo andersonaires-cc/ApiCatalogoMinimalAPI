@@ -245,3 +245,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+#Compiler/
+bin/
+obj
