@@ -15,6 +15,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 var app = builder.Build();
+//definir os endpoints
+
+app.MapGet("/", () => "Catálogo de Produtos - 2022");
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -246,6 +246,6 @@ paket-files/
 .idea/
 *.sln.iml
 
-#Compiler/
-bin/
-obj
+# Ignore any files in /bin and /obj Folders
+/bin
+/obj
