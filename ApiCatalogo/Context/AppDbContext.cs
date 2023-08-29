@@ -13,7 +13,7 @@ namespace ApiCatalogo.Context
         //DbSet representa um conjunto de entidades sobre os quais será possível fazer operações
         //Consultas links no DbSet serão convertidas emc onsultas no Banco de dados.
         public DbSet<Produto>? Produtos { get; set; }
-        public DbSet<Categoria>? categorias { get; set; }
+        public DbSet<Categoria>? Categorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)
         {

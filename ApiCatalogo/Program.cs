@@ -23,10 +23,20 @@ app.MapGet("/", () => "Catálogo de Produtos - 2022");
 app.MapPost("/categorias", async (Categoria categoria, AppDbContext db)
    =>
 {
-    db.categorias.Add(categoria);
+    db.Categorias.Add(categoria);
     await db.SaveChangesAsync();
 
     return Results.Created($"/categorias/{categoria.CategoriaId}", categoria);
+});
+
+app.MapGet("/categorias", async (AppDbContext db) => await db.Categorias.ToListAsync());
+
+app.MapGet("/categorias/{id:int}", async (int id, AppDbContext db) 
+    => {
+        return await db.Categorias.FindAsync(id)
+                is Categoria categoria
+                ? Results.Ok(categoria)
+                : Results.NotFound();
 });
 
 // Configure the HTTP request pipeline.
