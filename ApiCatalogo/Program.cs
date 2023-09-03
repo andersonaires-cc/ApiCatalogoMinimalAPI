@@ -6,10 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Diagnostics.Metrics;
-using System.Reflection.Metadata;
 using System.Text;
-using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "apiagenda", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCatalogo", Version = "v1" });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
@@ -66,7 +63,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                                            ValidateIssuerSigningKey = true,
 
                                            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                                           ValidAudience = builder.Configuration["Jwt: audience"],
+                                           ValidAudience = builder.Configuration["Jwt: Audience"],
                                            IssuerSigningKey = new SymmetricSecurityKey
                                            (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                                        };
@@ -84,7 +81,7 @@ app.MapPost("/login", [AllowAnonymous] (UserModel userModel, ITokenService token
     {
         return Results.BadRequest("Login Inválido");
     }
-    if(userModel.UserName =="anderson" && userModel.Password == "anderson#123")
+    if(userModel.UserName =="andersonaires" && userModel.Password == "anderson#123")
     {
         var tokenString = tokenService.GerarToken(app.Configuration["Jwt:Key"],
                     app.Configuration["Jwt:Issuer"],
