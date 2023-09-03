@@ -18,7 +18,7 @@ namespace ApiCatalogo.ApiEndpoints
             });
 
             app.MapGet("/categorias", async (AppDbContext db) =>
-                await db.Categorias.ToListAsync()).WithTags("Categorias").RequireAuthorization();
+                await db.Categorias.ToListAsync()).WithTags("Categorias");
 
             app.MapGet("/categorias/{id:int}", async (int id, AppDbContext db)
                 => {
